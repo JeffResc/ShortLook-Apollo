@@ -7,3 +7,5 @@ Show Apollo users' profile pictures in ShortLook when you receive a Apollo notif
 # Changelog
 ## v1.0
 Initial Release
+## v1.0.1
+Added A12/arm64e support.
