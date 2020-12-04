@@ -20,7 +20,7 @@ jobs:
           git clone --recursive git://github.com/theos/theos.git ~/theos
       - name: Build Package 🛠
         run: |
-          THEOS=~/theos
+          export THEOS=~/theos
           make package
       - name: Upload Artifacts 📤
         uses: actions/upload-artifact@v2
