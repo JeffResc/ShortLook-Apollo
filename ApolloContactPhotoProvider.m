@@ -5,6 +5,7 @@
 
 - (DDNotificationContactPhotoPromiseOffer *)contactPhotoPromiseOfferForNotification:(DDUserNotification *)notification {
   NSString *username = [notification.applicationUserInfo valueForKeyPath:@"author"];
+  if (!username) return nil;
   NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:[NSString stringWithFormat:@"https://www.reddit.com/user/%@/about.json",username]]];
   NSError* error;
   NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
